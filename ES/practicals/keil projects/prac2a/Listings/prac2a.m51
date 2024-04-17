@@ -1,0 +1,94 @@
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    02/07/2023  21:38:19  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\prac2a.obj TO .\Objects\prac2a PRINT (.\Listings\prac2a.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\prac2a.obj (PRAC2A)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\prac2a (PRAC2A)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     0013H     UNIT         ?PR?DELAY?PRAC2A
+            CODE    0813H     000EH     UNIT         ?PR?MAIN?PRAC2A
+            CODE    0821H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\prac2a (PRAC2A)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?PRAC2A
+
+?PR?MAIN?PRAC2A
+  +--> ?PR?DELAY?PRAC2A
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\prac2a (PRAC2A)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        PRAC2A
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  C:0800H         PUBLIC        delay
+  C:0813H         PUBLIC        main
+  D:0089H         PUBLIC        TMOD
+  B:0088H.5       PUBLIC        TF0
+  D:008CH         PUBLIC        TH0
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  02/07/2023  21:38:19  PAGE 2
+
+
+  D:008AH         PUBLIC        TL0
+  B:0088H.4       PUBLIC        TR0
+  -------         PROC          DELAY
+  C:0800H         LINE#         2
+  C:0800H         LINE#         3
+  C:0803H         LINE#         4
+  C:0806H         LINE#         5
+  C:0809H         LINE#         6
+  C:080BH         LINE#         7
+  C:080EH         LINE#         8
+  C:0810H         LINE#         9
+  C:0812H         LINE#         10
+  -------         ENDPROC       DELAY
+  -------         PROC          MAIN
+  C:0813H         LINE#         12
+  C:0813H         LINE#         13
+  C:0813H         LINE#         14
+  C:0816H         LINE#         15
+  C:0819H         LINE#         16
+  C:081CH         LINE#         17
+  C:081FH         LINE#         19
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        PRAC2A
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0021H BYTE ( 1%) *
+******************************************************************************
+
+Program Size: data=9.0 xdata=0 code=48
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

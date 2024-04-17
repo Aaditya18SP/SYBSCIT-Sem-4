@@ -1,0 +1,89 @@
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    02/11/2023  22:00:33  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\prac2b_contro1.obj TO .\Objects\prac2b PRINT (.\Listings\prac2b.m51) RAMSIZE (256)
+>> 
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\prac2b_contro1.obj (PRAC2B_CONTRO1)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\prac2b (PRAC2B_CONTRO1)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     000FH     UNIT         ?PR?DELAY?PRAC2B_CONTRO1
+            CODE    080FH     000CH     UNIT         ?C_C51STARTUP
+            CODE    081BH     000BH     UNIT         ?PR?MAIN?PRAC2B_CONTRO1
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\prac2b (PRAC2B_CONTRO1)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?PRAC2B_CONTRO1
+
+?PR?MAIN?PRAC2B_CONTRO1
+  +--> ?PR?DELAY?PRAC2B_CONTRO1
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\prac2b (PRAC2B_CONTRO1)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        PRAC2B_CONTRO1
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  C:0800H         PUBLIC        delay
+  C:081BH         PUBLIC        main
+  -------         PROC          MAIN
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  02/11/2023  22:00:33  PAGE 2
+
+
+  C:081BH         LINE#         2
+  C:081BH         LINE#         3
+  C:081BH         LINE#         5
+  C:081BH         LINE#         6
+  C:081EH         LINE#         7
+  C:0821H         LINE#         8
+  C:0824H         LINE#         10
+  -------         ENDPROC       MAIN
+  -------         PROC          DELAY
+  -------         DO            
+  D:0006H         SYMBOL        i
+  -------         ENDDO         
+  C:0800H         LINE#         14
+  C:0800H         LINE#         16
+  C:0803H         LINE#         17
+  C:080EH         LINE#         19
+  -------         ENDPROC       DELAY
+  -------         ENDMOD        PRAC2B_CONTRO1
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 001AH BYTE ( 1%) *
+******************************************************************************
+
+Program Size: data=9.0 xdata=0 code=41
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

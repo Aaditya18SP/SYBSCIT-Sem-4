@@ -1,0 +1,83 @@
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    03/12/2023  00:04:13  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\prac5b.obj TO .\Objects\prac5b PRINT (.\Listings\prac5b.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\prac5b.obj (PRAC5B)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  .\Objects\prac5b (PRAC5B)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     002EH     UNIT         ?DT?PRAC5B
+            IDATA   0036H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     008CH     UNIT         ?C_C51STARTUP
+            CODE    088CH     0032H     UNIT         ?C_INITSEG
+            CODE    08BEH     001DH     UNIT         ?PR?MAIN?PRAC5B
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\prac5b (PRAC5B)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?PRAC5B
+  +--> ?C_INITSEG
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\prac5b (PRAC5B)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        PRAC5B
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  C:08BEH         PUBLIC        main
+  D:0008H         PUBLIC        sine
+  -------         PROC          MAIN
+  -------         DO            
+  D:0006H         SYMBOL        i
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  03/12/2023  00:04:13  PAGE 2
+
+
+  -------         ENDDO         
+  C:08BEH         LINE#         6
+  C:08BEH         LINE#         7
+  C:08BEH         LINE#         9
+  C:08C1H         LINE#         10
+  C:08C1H         LINE#         11
+  C:08C1H         LINE#         12
+  C:08C4H         LINE#         13
+  C:08C4H         LINE#         14
+  C:08CEH         LINE#         15
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        PRAC5B
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 004EH BYTE ( 3%) *
+******************************************************************************
+
+Program Size: data=55.0 xdata=0 code=222
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

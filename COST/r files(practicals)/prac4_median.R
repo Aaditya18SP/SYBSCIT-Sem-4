@@ -1,0 +1,47 @@
+data <- read.csv("D:\\ADITYA FYBscIT\\SUBJECTS\\4TH SEM\\COST\\Book1.csv")
+print(data)
+class = data$class_m
+frequency =c(data$frequency)
+h=class[2]-class[1]
+i=1L
+cu_freq=c()
+n=0L
+
+while(i<=length(class)){
+n=n+frequency[i]
+cu_freq=append(cu_freq,n)
+i=i+1
+}
+
+data$cu_freq=cu_freq
+print(data)
+#median class selection
+if(n%%2==0){
+j=((n/2)+((n/2)+1))/2
+}else
+{
+j=n/2
+}
+cat("n/2 is :",j,"\n")
+i=1L
+while(i<=(length(class)-1)){
+if(j>cu_freq[i]&&j<cu_freq[i+1]){
+#finding lower class boundary
+l1=((class[i]+class[i+1])/2)
+f_median=frequency[i+1]
+cf_median=cu_freq[i]
+}else if(j<cu_freq[i] && i==1){
+#median class is the first class
+l1=((class[i]+class[i+1])/2)-h
+f_median=frequency[i]
+cf_median=cu_freq[i]
+}
+i=i+1
+
+
+}
+med=l1+(((j-cf_median)/f_median))*h
+cat("L1 is:" ,l1,"\n")
+cat("cf_median is:" ,cf_median,"\n")
+cat("f_median is:" ,f_median,"\n")
+cat("the median is :",med,"\n")

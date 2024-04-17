@@ -1,0 +1,8 @@
+x=c(151,174,138,186,128,136,179,163,152,131)
+y=c(63,81,56,91,47,57,76,72,62,48)
+relation=lm(y~x)
+a=data.frame(x=149)
+b=data.frame(x=160)
+print(predict(relation,a))
+print(predict(relation,b))
+plot(y,x,abline(lm(x~y)),col="blue",xlab="weight in kg",ylab="height in cm")

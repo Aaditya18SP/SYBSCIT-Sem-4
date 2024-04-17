@@ -1,0 +1,5 @@
+#library(matlib)
+m1=matrix(c(1,2,3,4,5,0,7,8,9),nrow=3,ncol=3)
+m2=solve(m1)
+print(m2)
+#inv(m1)

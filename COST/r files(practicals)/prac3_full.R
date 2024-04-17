@@ -1,0 +1,63 @@
+#mode=function(x){
+#unique_x=unique(x);
+#tabulate_x=tabulate(match(x,unique_x));
+#unique_x[tabulate_x==max(tabulate_x)];
+#}
+mode=function(ele_v){
+count=0L
+count1=c()
+
+for(i in 1:length(ele_v)){
+curr_ele=ele_v[i]
+count=0L
+
+for(j in 1:length(ele_v)){
+if(curr_ele==ele_v[j]){
+count=count+1
+}
+}
+count1[i]=count
+}
+mode=0L
+for(i in 1:(length(ele_v)-1)){
+if(count1[i]>count1[i+1]){
+mode=ele_v[i]
+}else if(count1[i+1]>count1[i]){
+mode=ele_v[i+1]
+}
+
+}
+if(mode==0){
+print("mode doesnt exist")
+}else{
+cat("the mode is :",mode,"\n")
+}
+}
+
+
+size=readline("enter number of elements:");
+size=as.integer(size);
+i=1L;
+v1=c();
+while(i<=size){
+v=readline("enter number for mean:");
+v1=append(v1,as.integer(v));
+i=i+1;
+}
+print(v1);
+mean_vec=mean(v1);
+median_vec=median(v1);
+mode(v1);
+quartile_vec=quantile(v1,probs=c(0.25,0.5,0.75))
+range_vec=range(v1); 
+iq_range_vec=IQR(v1);
+cat("mean is :",mean_vec,"\n");
+cat("median is :",median_vec,"\n");
+
+cat("quartiles are :",quartile_vec,"\n")
+cat("range is :",range_vec,"\n")
+cat("also range is:",max(v1)-min(v1),"\n");
+cat("interquartile range is:",iq_range_vec,"\n");
+
+#histogram
+hist(v1,main="interquartile range",xlab="iq range",xlim=c(0,5),ylim=c(0,5),border="blue",col="yellow")

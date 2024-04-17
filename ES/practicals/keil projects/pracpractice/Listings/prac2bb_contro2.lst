@@ -1,0 +1,31 @@
+C51 COMPILER V9.60.7.0   PRAC2BB_CONTRO2                                                   03/14/2023 18:27:17 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE PRAC2BB_CONTRO2
+OBJECT MODULE PLACED IN .\Objects\prac2bb_contro2.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE prac2bb_contro2.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Li
+                    -stings\prac2bb_contro2.lst) TABS(2) OBJECT(.\Objects\prac2bb_contro2.obj)
+
+line level    source
+
+   1          #include <reg51.h>
+   2          void main(){
+   3   1      while(1){
+   4   2      P3=P1;
+   5   2      }
+   6   1      
+   7   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =      5    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

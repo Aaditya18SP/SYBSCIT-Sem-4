@@ -1,0 +1,52 @@
+C51 COMPILER V9.60.7.0   PRAC6                                                             03/12/2023 00:49:21 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE PRAC6
+OBJECT MODULE PLACED IN .\Objects\prac6.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE prac6.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\pra
+                    -c6.lst) TABS(2) OBJECT(.\Objects\prac6.obj)
+
+line level    source
+
+   1          #include<reg51.h>
+   2          void delay()
+   3          {
+   4   1        int i, j;
+   5   1        for(i = 0; i <= 1000; i++)
+   6   1        {
+   7   2          for(j = 0; j < 100; j++)
+   8   2          {
+   9   3          }
+  10   2        }
+  11   1      }
+  12          
+  13          void main()
+  14          {
+  15   1        while(1)
+  16   1        {
+  17   2          
+  18   2          //clockwise
+  19   2          P2=0x01;
+  20   2          delay();
+  21   2          P2 = 0x02;
+  22   2          delay();
+  23   2          P2 = 0x04;
+  24   2          delay();
+  25   2          P2 = 0x08;
+  26   2          delay();
+  27   2        }
+  28   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     55    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

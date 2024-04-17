@@ -1,0 +1,44 @@
+C51 COMPILER V9.60.7.0   PRAC4B                                                            03/11/2023 23:20:13 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE PRAC4B
+OBJECT MODULE PLACED IN .\Objects\prac4b.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE prac4b.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\pr
+                    -ac4b.lst) TABS(2) OBJECT(.\Objects\prac4b.obj)
+
+line level    source
+
+   1          #include <reg51.h>
+   2          void delay(){
+   3   1        int i,j;
+   4   1        for(i=0;i<10000;i++){
+   5   2          for(j=0;j<10;j++){
+   6   3          }
+   7   2        }
+   8   1      }
+   9          void main(){
+  10   1      int number[]={0xC0,0XF9,0xA4,0XB0,0X99,0X92,0X82,0XF8,0X80,0X90};
+  11   1      unsigned int i,j;
+  12   1      for(i=0;i<10;i++){
+  13   2        delay();
+  14   2      P0=number[i];
+  15   2      for(j=0;j<10;j++){
+  16   3        P2=number[j];
+  17   3        delay();
+  18   3      }
+  19   2      }
+  20   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    103    ----
+   CONSTANT SIZE    =     20    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----      20
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

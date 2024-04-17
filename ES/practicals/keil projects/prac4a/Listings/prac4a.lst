@@ -1,0 +1,48 @@
+C51 COMPILER V9.60.7.0   PRAC4A                                                            02/23/2023 00:10:30 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE PRAC4A
+OBJECT MODULE PLACED IN .\Objects\prac4a.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE prac4a.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\pr
+                    -ac4a.lst) TABS(2) OBJECT(.\Objects\prac4a.obj)
+
+line level    source
+
+   1          #include<reg51.h>
+   2          void send(char x); // Prototype of send() function.
+   3          void main(void)
+   4          {
+   5   1      TMOD = 0x20; // 0x20 is stored in TMODregister to set Timer1 in 8-
+   6   1      //Bit Auto-Reload Mode
+   7   1      TH1 = 0xFD; // TH1register is loaded with value 0xFD to generate
+   8   1      //baud rate of 9600
+   9   1      SCON = 0x50; // 0x50 is loaded into SCONregister to configure
+  10   1      //Timer1 in Mode 1.
+  11   1      TR1 = 1; // When TR = 1.
+  12   1        
+  13   1      send('Y');
+  14   1      send('E');
+  15   1      send('S');
+  16   1      while(1);
+  17   1      }
+  18          void send(char x) // Send() function transmits the character passed to it
+  19          {
+  20   1      SBUF = x;
+  21   1      while(TI==0);
+  22   1      // Wait till transmission is finised i.e. wait until TI = 1
+  23   1      TI=0; // Clear TI flag
+  24   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     36    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

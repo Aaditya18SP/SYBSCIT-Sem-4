@@ -1,0 +1,5 @@
+library("moments")
+vec_1=c(40,41,42,43,50)
+vec_2=c(2,5,3,1,7,4)
+cat("skewness is:",skewness(vec_1),"\n")
+cat("kurtois is:",kurtosis(vec_2)-3,"\n")
